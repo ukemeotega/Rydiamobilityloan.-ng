@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#073b67">
+<title>Rydia Mobility and Loans Ltd</title>
+<style>
+:root{--navy:#073b67;--blue:#087bc1;--cyan:#35c6d6;--ink:#16324b;--muted:#647789;--paper:#fff;--line:#d9e5ee}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#eaf6fb;line-height:1.55}
+.ocean-bg{position:fixed;inset:0;z-index:-2;overflow:hidden;background:linear-gradient(180deg,#06365f 0%,#0878a9 48%,#8ce1e7 100%)}
+.ocean-bg:before,.ocean-bg:after{content:"";position:absolute;left:-20%;width:140%;height:38%;border-radius:48% 52% 0 0;opacity:.32;background:#b8f5f0;animation:waveMove 14s ease-in-out infinite alternate}
+.ocean-bg:before{bottom:-17%;transform:rotate(-4deg)}.ocean-bg:after{bottom:-23%;background:#fff;opacity:.25;animation-duration:19s;animation-direction:alternate-reverse}
+@keyframes waveMove{from{transform:translateX(-3%) rotate(-3deg)}to{transform:translateX(3%) rotate(3deg)}}
+header{color:white;padding:28px 18px 35px;text-align:center;background:linear-gradient(135deg,rgba(3,35,69,.94),rgba(0,117,170,.88));box-shadow:0 8px 25px #002b4b44}
+header h1{margin:0 0 6px;font-size:clamp(1.5rem,4vw,2.3rem);letter-spacing:.5px}header p{margin:4px auto;max-width:800px}
+.notice{display:inline-block;margin-top:12px;padding:7px 14px;border:1px solid #ffffff80;border-radius:30px;font-weight:bold;font-size:.86rem}
+nav{position:sticky;top:0;z-index:5;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:10px;background:#062f52ed;backdrop-filter:blur(8px)}
+nav a{color:white;text-decoration:none;padding:6px 10px;border-radius:20px;font-size:.85rem}nav a:hover{background:#ffffff26}
+main{width:min(1100px,94%);margin:24px auto 50px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+section,.admin-panel{background:rgba(255,255,255,.96);border:1px solid #ffffffb0;border-radius:17px;padding:21px;box-shadow:0 12px 30px #00395b22;scroll-margin-top:80px}
+section h2{margin:0 0 15px;color:var(--navy);font-size:1.2rem;border-bottom:2px solid #d7f1f4;padding-bottom:9px}
+.full{grid-column:1/-1}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field.fullfield{grid-column:1/-1}
+label{font-size:.9rem;font-weight:700;color:#28475e}input,select,textarea{width:100%;padding:11px 12px;border:1px solid #cbd9e3;border-radius:9px;background:#fff;color:#17364d;font:inherit;min-width:0}
+input:focus,select:focus,textarea:focus{outline:2px solid #56c7d7;border-color:transparent}button,.btn{border:0;border-radius:9px;padding:11px 16px;background:linear-gradient(120deg,#087bc1,#05a9b5);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}button:hover{filter:brightness(.94)}button.secondary{background:#31556f}button.light{background:#e7f5f9;color:#07517d;border:1px solid #b8e2eb}
+.result{padding:10px 12px;background:#edf8fb;border-left:4px solid #1a9db8;border-radius:7px;margin-top:10px;min-height:22px}.small{font-size:.84rem;color:var(--muted)}.checkline{display:flex;align-items:flex-start;gap:9px;margin:12px 0}.checkline input{width:auto;margin-top:5px}.hidden{display:none!important}
+.admin-panel{grid-column:1/-1;overflow:hidden;padding:0}.admin-header{padding:22px;color:white;background:linear-gradient(120deg,#062f5c,#087fc0 60%,#12a8b5)}.admin-header h2{color:white;border:0;margin:0 0 4px}.admin-header p{margin:0;color:#e4f8ff}.admin-body{padding:20px}.admin-toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.data-card{border:1px solid var(--line);border-radius:10px;padding:12px;margin:10px 0;background:#f8fcfe;overflow-wrap:anywhere}.data-card strong{color:var(--navy)}.statrow{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}.stat{background:#eaf7fb;padding:12px 16px;border-radius:10px;min-width:120px}.stat b{display:block;font-size:1.3rem;color:var(--navy)}
+footer{text-align:center;color:white;background:#052d4c;padding:25px 15px}footer a{color:#aeefff}
+@media(max-width:720px){main{grid-template-columns:1fr;width:94%}.full{grid-column:auto}.grid{grid-template-columns:1fr}nav{position:relative}.admin-panel{grid-column:auto}}
+@media print{.ocean-bg,nav,button,.no-print,footer{display:none!important}body{background:white}main{display:block;width:100%;margin:0}section{box-shadow:none;break-inside:avoid;margin:10px 0}}
+</style>
+</head>
+<body>
+<div class="ocean-bg" aria-hidden="true"></div>
+<header>
+<h1>RYDIA MOBILITY AND LOANS LTD</h1>
+<p>19 Alhaja Shifau Street, Dopemu Road, Lagos State.</p>
+<p>Tel: 08144725052 &nbsp; | &nbsp; Email: rydiamobilityloan@gmail.com</p>
+<div class="notice">18+ ONLY &nbsp; • &nbsp; 20 WORKING DAYS &nbsp; • &nbsp; NIN FORMAT CHECK</div>
+</header>
+<nav class="no-print">
+<a href="#calculator">Calculator</a><a href="#eligibility">Eligibility</a><a href="#nin">NIN</a><a href="#bvn">BVN</a><a href="#borrower">Borrower form</a><a href="#guarantor">Guarantor</a><a href="#receipt">Receipt</a><a href="#schedule">Schedule</a><a href="#admin">Admin</a>
+</nav>
+<main>
+<section id="calculator">
+<h2>1. Loan Calculator</h2>
+<div class="grid">
+<div class="field"><label for="loanAmount">Loan Amount (NGN)</label><input id="loanAmount" type="number" min="0" placeholder="Enter amount"></div>
+<div class="field"><label for="interestRate">Interest Rate (%)</label><input id="interestRate" type="number" min="0" step="0.01" placeholder="Enter rate"></div>
+</div>
+<button onclick="calculateLoan()">Calculate Loan</button>
+<div class="result" id="loanResult" aria-live="polite">Your loan calculation will appear here.</div>
+</section>
+
+<section id="eligibility">
+<h2>2. Eligibility Check</h2>
+<div class="grid">
+<div class="field"><label for="eligDob">Date of Birth</label><input id="eligDob" type="date"></div>
+<div class="field"><label for="monthlyIncome">Monthly Income (NGN)</label><input id="monthlyIncome" type="number" min="0"></div>
+<div class="field"><label for="hasGuarantor">Do you have a guarantor?</label><select id="hasGuarantor"><option value="">Select</option><option>Yes</option><option>No</option></select></div>
+<div class="field"><label for="dailyPay">Can you pay daily for 20 days?</label><select id="dailyPay"><option value="">Select</option><option>Yes</option><option>No</option></select></div>
+</div>
+<button onclick="checkEligibility()">Check Eligibility</button>
+<div class="result" id="eligResult" aria-live="polite">Complete the details to check the basic criteria.</div>
+<p class="small">This is a preliminary check only and is not a loan approval or offer.</p>
+</section>
+
+<section id="nin">
+<h2>3. NIN Verification Centre</h2>
+<p>Enter your National Identification Number to begin the verification process.</p>
+<div class="field"><label for="ninInput">NIN - 11 Digits</label><input id="ninInput" inputmode="numeric" maxlength="11" placeholder="Enter your 11-digit NIN"></div>
+<label class="checkline"><input type="checkbox" onchange="toggleVisible('ninInput',this)"> Show NIN</label>
+<div class="result" id="ninStatus">Status: Waiting for NIN.</div>
+<button onclick="checkIdentityFormat('ninInput','ninStatus','NIN')">Check NIN</button>
+<button class="secondary" onclick="window.open('https://nimc.gov.ng/','_blank','noopener')">Verify NIN Officially</button>
+<p class="small">Format checking only confirms that the number contains 11 digits. Official verification requires an authorized NIMC verification service.</p>
+<h3>Official Verification Portal</h3><p>Visit the official NIMC website for information about identity verification services. <a href="https://nimc.gov.ng/" target="_blank" rel="noopener">Open NIMC Website</a></p>
+</section>
+
+<section id="bvn">
+<h2>4. BVN Format Check</h2>
+<div class="field"><label for="bvnInput">BVN - 11 Digits</label><input id="bvnInput" inputmode="numeric" maxlength="11" placeholder="Enter your 11-digit BVN"></div>
+<label class="checkline"><input type="checkbox" onchange="toggleVisible('bvnInput',this)"> Show BVN</label>
+<div class="result" id="bvnStatus">Status: Waiting for BVN.</div>
+<button onclick="checkIdentityFormat('bvnInput','bvnStatus','BVN')">Check BVN Format</button>
+<p class="small">This only checks the number format. It does not verify BVN ownership.</p>
+</section>
+
+<section id="borrower" class="full">
+<h2>5. Borrower Application Form</h2>
+<form id="borrowerForm" onsubmit="submitBorrower(event)">
+<div class="grid">
+<div class="field"><label>Full Name *</label><input name="Full Name" required autocomplete="name"></div>
+<div class="field"><label>Phone *</label><input name="Phone" type="tel" required autocomplete="tel"></div>
+<div class="field"><label>Email</label><input name="Email" type="email" autocomplete="email"></div>
+<div class="field"><label>Date of Birth *</label><input name="Date of Birth" type="date" required></div>
+<div class="field"><label>Residential Address</label><input name="Residential Address"></div>
+<div class="field"><label>State / LGA</label><input name="State / LGA"></div>
+<div class="field"><label>Employment</label><select name="Employment"><option value="">Select employment</option><option>Employed</option><option>Self-employed</option><option>Business owner</option><option>Other</option></select></div>
+<div class="field"><label>Monthly Income</label><input name="Monthly Income" type="number" min="0"></div>
+<div class="field"><label>Loan Type</label><select name="Loan Type"><option value="">Select loan type</option><option>Bike on instalments</option><option>Mobility loan</option><option>Other</option></select></div>
+<div class="field"><label>Amount Requested</label><input name="Amount Requested" type="number" min="0"></div>
+<div class="field"><label>Bank Name</label><input name="Bank Name"></div>
+<div class="field"><label>Account Number</label><input name="Account Number" inputmode="numeric"></div>
+<div class="field fullfield"><label>Purpose of Loan</label><textarea name="Purpose of Loan" rows="3"></textarea></div>
+</div>
+<label class="checkline"><input type="checkbox" name="Age and accuracy confirmation" required> I confirm I am 18+ and the information is correct.</label>
+<button type="submit">Submit Application</button>
+<button type="reset" class="light">Clear Form</button>
+<div class="result" id="borrowerStatus" aria-live="polite">Your email application will be prepared when submitted.</div>
+</form>
+<button class="secondary" onclick="contactWhatsApp()">Contact Us on WhatsApp</button>
+<p class="small">Do not send NIN, BVN, OTPs or identity documents through ordinary email or WhatsApp. A secure backend is required for sensitive data.</p>
+</section>
+
+<section id="guarantor" class="full">
+<h2>6. Guarantor Form</h2>
+<form id="guarantorForm" onsubmit="submitGuarantor(event)">
+<div class="grid">
+<div class="field"><label>Borrower Name *</label><input name="Borrower Name" required></div>
+<div class="field"><label>Guarantor Name *</label><input name="Guarantor Name" required></div>
+<div class="field"><label>Guarantor Phone *</label><input name="Guarantor Phone" type="tel" required></div>
+<div class="field"><label>Guarantor Date of Birth *</label><input name="Guarantor Date of Birth" type="date" required></div>
+<div class="field"><label>Relationship</label><input name="Relationship"></div>
+<div class="field"><label>Address</label><input name="Address"></div>
+<div class="field"><label>Amount Guaranteed</label><input name="Amount Guaranteed" type="number" min="0"></div>
+</div>
+<label class="checkline"><input type="checkbox" name="Guarantor consent" required> I confirm I am 18+ and voluntarily agree to the guarantor terms.</label>
+<button type="submit">Submit Guarantor Form</button>
+<button type="reset" class="light">Clear Form</button>
+<div class="result" id="guarantorStatus" aria-live="polite">Guarantor email will be prepared when submitted.</div>
+</form>
+</section>
+
+<section id="receipt">
+<h2>7. Daily Payment Receipt</h2>
+<div class="grid">
+<div class="field"><label for="receiptNo">Receipt Number</label><input id="receiptNo"></div>
+<div class="field"><label for="receiptDate">Date</label><input id="receiptDate" type="date"></div>
+<div class="field"><label for="receivedFrom">Received From</label><input id="receivedFrom"></div>
+<div class="field"><label for="amountPaid">Amount Paid</label><input id="amountPaid" type="number" min="0"></div>
+<div class="field"><label for="dayOf20">Day of 20</label><input id="dayOf20" type="number" min="1" max="20"></div>
+<div class="field"><label for="paymentMethod">Payment Method</label><select id="paymentMethod"><option>Cash</option><option>Bank Transfer</option><option>POS</option><option>Other</option></select></div>
+</div>
+<button onclick="updateReceipt()">Update Receipt</button><button onclick="window.print()" class="secondary">Print Receipt</button>
+<div class="result" id="receiptPreview">
+<h3>RYDIA MOBILITY AND LOANS LTD</h3><strong>Receipt Preview</strong>
+<p>Receipt: <span id="pReceipt">—</span></p><p>Date: <span id="pDate">—</span></p><p>Received From: <span id="pName">—</span></p><p>Amount Paid: <span id="pAmount">—</span></p><p>Day: <span id="pDay">—</span> / 20</p><p>Payment Method: <span id="pMethod">—</span></p>
+</div>
+</section>
+
+<section id="schedule">
+<h2>8. 20-Day Repayment Schedule</h2>
+<div class="grid">
+<div class="field"><label for="scheduleAmount">Loan Amount</label><input id="scheduleAmount" type="number" min="0"></div>
+<div class="field"><label for="scheduleInterest">Interest (%)</label><input id="scheduleInterest" type="number" min="0" step="0.01"></div>
+<div class="field"><label for="scheduleStart">Start Date</label><input id="scheduleStart" type="date"></div>
+</div>
+<button onclick="generateSchedule()">Generate Schedule</button>
+<div id="scheduleResult" class="result">Your 20-day repayment schedule will appear here.</div>
+<button onclick="window.print()" class="secondary">Print All Forms</button>
+</section>
+
+<section id="contact">
+<h2>9. Contact Us</h2>
+<p><strong>Phone:</strong> 08144725052</p><p><strong>Email:</strong> <a href="mailto:rydiamobilityloan@gmail.com">rydiamobilityloan@gmail.com</a></p>
+<p><strong>Address:</strong> 19 Alhaja Shifau Street, Dopemu Road, Lagos.</p><p><strong>Hours:</strong> Monday - Saturday, 8am - 6pm</p>
+<button onclick="contactWhatsApp()">Chat on WhatsApp</button>
+</section>
+
+<section id="admin" class="admin-panel">
+<div class="admin-header"><h2>Rydia Admin Panel</h2><p>Application and guarantor submissions saved in this browser</p></div>
+<div class="admin-body">
+<div id="adminLogin">
+<p class="small">Local demonstration dashboard. Set a password before using this on a shared device. This browser-only panel is not a secure production admin system.</p>
+<div class="grid"><div class="field"><label for="adminPassword">Admin password</label><input id="adminPassword" type="password" placeholder="Enter admin password"></div></div>
+<button onclick="adminLogin()">Open Admin Panel</button>
+<div id="adminLoginStatus" class="small" aria-live="polite"></div>
+</div>
+<div id="adminDashboard" class="hidden">
+<div class="statrow"><div class="stat"><b id="appCount">0</b>Borrower forms</div><div class="stat"><b id="guarCount">0</b>Guarantor forms</div></div>
+<div class="admin-toolbar"><button onclick="renderAdmin()">Refresh Records</button><button class="secondary" onclick="exportRecords()">Export CSV</button><button class="light" onclick="adminLogout()">Log Out</button></div>
+<h3>Borrower Applications</h3><div id="ownerDataList"></div>
+<h3>Guarantor Applications</h3><div id="guarantorDataList"></div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<h3>RYDIA MOBILITY AND LOANS LTD</h3>
+<p>18+ Only | Professional Loan Services</p><p>08144725052 · rydiamobilityloan@gmail.com</p><p>© 2026 Rydia Mobility and Loans Ltd</p>
+</footer>
+<script>
+const EMAIL="rydiamobilityloan@gmail.com";
+const PHONE="2348144725052";
+const STORAGE_APP="rydia_borrower_records_v1", STORAGE_GUAR="rydia_guarantor_records_v1";
+const readRecords=k=>{try{return JSON.parse(localStorage.getItem(k)||"[]")}catch(e){return[]}};
+const saveRecords=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+function money(n){return "₦"+Number(n||0).toLocaleString("en-NG",{maximumFractionDigits:2})}
+function calculateLoan(){const a=Number(document.getElementById("loanAmount").value),r=Number(document.getElementById("interestRate").value);if(!(a>0)||r<0){loanResult.textContent="Enter a valid loan amount and interest rate.";return}const interest=a*r/100,total=a+interest;loanResult.innerHTML=`Principal: <b>${money(a)}</b><br>Interest: <b>${money(interest)}</b><br>Total repayment: <b>${money(total)}</b><br>20-day daily amount: <b>${money(total/20)}</b>`}
+function age(d){if(!d)return 0;const b=new Date(d+"T00:00:00"),t=new Date();let a=t.getFullYear()-b.getFullYear();if(t.getMonth()<b.getMonth()||(t.getMonth()===b.getMonth()&&t.getDate()<b.getDate()))a--;return a}
+function checkEligibility(){const dob=eligDob.value,income=Number(monthlyIncome.value),g=hasGuarantor.value,p=dailyPay.value;if(!dob||!monthlyIncome.value||!g||!p){eligResult.textContent="Please complete all fields.";return}const years=age(dob);eligResult.textContent=years<18?"Not eligible: applicants must be 18 or older.":g==="Yes"&&p==="Yes"&&income>0?"Basic criteria appear satisfied. Final approval is subject to review.":"The selected answers do not currently meet the basic criteria."}
+function toggleVisible(id,box){document.getElementById(id).type=box.checked?"text":"password"}
+function checkIdentityFormat(inputId,statusId,label){const v=document.getElementById(inputId).value.trim();document.getElementById(statusId).textContent=v.length===11&&/^\d{11}$/.test(v)?`${label} format looks correct (11 digits). This is not official verification.`:`${label} must contain exactly 11 digits.`}
+function formObject(form){return Object.fromEntries(new FormData(form).entries())}
+function isAdultForm(form,field){const d=form.elements[field]?.value;return age(d)>=18}
+function prepareMail(subject,data){const body=Object.entries(data).map(([k,v])=>`${k}: ${v}`).join("\n");const url=`mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;window.location.href=url}
+function submitBorrower(e){e.preventDefault();const f=e.currentTarget;if(!isAdultForm(f,"Date of Birth")){borrowerStatus.textContent="Applicants must be 18 or older.";return}const data=formObject(f);data["Submitted at"]=new Date().toLocaleString();const list=readRecords(STORAGE_APP);list.push(data);saveRecords(STORAGE_APP,list);borrowerStatus.textContent="Your email application has been prepared. Your email app should open now.";prepareMail("Rydia Mobility - Borrower Application",data);f.reset()}
+function submitGuarantor(e){e.preventDefault();const f=e.currentTarget;if(!isAdultForm(f,"Guarantor Date of Birth")){guarantorStatus.textContent="The guarantor must be 18 or older.";return}const data=formObject(f);data["Submitted at"]=new Date().toLocaleString();const list=readRecords(STORAGE_GUAR);list.push(data);saveRecords(STORAGE_GUAR,list);guarantorStatus.textContent="Guarantor email prepared. Your email app should open now.";prepareMail("Rydia Mobility - Guarantor Form",data);f.reset()}
+function contactWhatsApp(){window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent("Hello Rydia Mobility and Loans Ltd. I would like to make an enquiry."),"_blank","noopener")}
+function updateReceipt(){const pairs={pReceipt:receiptNo.value,pDate:receiptDate.value,pName:receivedFrom.value,pAmount:money(amountPaid.value),pDay:dayOf20.value,pMethod:paymentMethod.value};Object.entries(pairs).forEach(([id,v])=>document.getElementById(id).textContent=v||"—")}
+function generateSchedule(){const a=Number(scheduleAmount.value),r=Number(scheduleInterest.value),start=scheduleStart.value;if(!(a>0)||r<0||!start){scheduleResult.textContent="Enter a valid loan amount, interest rate and start date.";return}const total=a+(a*r/100),daily=total/20
